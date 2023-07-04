@@ -3,7 +3,7 @@
 ## Sobre as tecnologias
 
 Foram utilizadas as tecnologias VueJS 3 com composition API, node com express e docker para orquestração do ambiente.
-A escolha foi dessas tecnologias devido a facilidade de prototipação no prazo vigente.
+A escolha dessas tecnologias foi devido a facilidade de prototipação no prazo vigente.
 
 ## Rodando os ambientes
 
