@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  frontend:
+    container_name: frontend-soha
+    build: node:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/frontend
+    working_dir: /frontend
+    depends_on:
+      - api
+    networks:
+      - soha
+    tty: true
+    command: sh -c "npm install && npm run dev"
+
+  api:
+    container_name: api-soha
+    image: node:latest
+    ports:
+      - 7000:7000
+    volumes:
+      - ./api:/api
+    working_dir: /api
+    networks:
+    - soha
+    tty: true
+    command: sh -c "npm install && npm run dev"
+
+networks:
+  soha:
